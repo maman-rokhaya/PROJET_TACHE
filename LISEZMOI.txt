@@ -1,0 +1,137 @@
+# 📝 MINI PROJET SIMPLE - GESTION DES TÂCHES
+
+## 🚀 Installation RAPIDE
+
+### Étape 1 : Copier le dossier
+```
+Mettre "ProjetTaches3_Simple" dans :
+- C:\xampp\htdocs\  (pour XAMPP)
+- C:\wamp64\www\    (pour WAMP)
+```
+
+### Étape 2 : Lancer
+```
+1. Démarrer Apache dans XAMPP/WAMP
+2. Ouvrir le navigateur
+3. Aller sur : http://localhost/ProjetTaches3_Simple/
+```
+
+C'est tout ! ✅
+
+---
+
+## 📂 Fichiers IMPORTANTS
+
+```
+ProjetTaches3_Simple/
+│
+├── index.php                    ← Point d'entrée
+├── data/
+│   └── taches.json             ← Les tâches sont ici (JSON)
+├── pages/
+│   ├── dashboard.php           ← Statistiques
+│   └── indexTaches.php         ← Gestion des tâches (TOUT EN UN)
+├── includes/                    ← Header, footer, menu
+└── public/                      ← CSS et JS
+```
+
+---
+
+## ✨ Fonctionnalités
+
+### 1️⃣ Ajouter une tâche
+- Remplir le formulaire à gauche
+- Cliquer "Ajouter"
+
+### 2️⃣ Modifier une tâche
+- Cliquer sur ✏️
+- Modifier
+- Cliquer "Modifier"
+
+### 3️⃣ Changer le statut
+- Cliquer sur ➡️
+- À faire → En cours → Terminée
+
+### 4️⃣ Supprimer
+- Cliquer sur 🗑️
+
+### 5️⃣ Filtrer
+- Recherche par mot-clé
+- Filtre par statut
+- Filtre par priorité
+
+### 6️⃣ Voir les stats
+- Cliquer sur "Tableau de Bord"
+
+---
+
+## 🎨 Code simple
+
+**Tout le code principal est dans UN SEUL fichier :**
+`pages/indexTaches.php`
+
+Il contient :
+- Les fonctions (lire, sauvegarder, etc.)
+- Le traitement (ajouter, modifier, supprimer)
+- L'affichage (formulaire + liste)
+
+**Pas de fichiers séparés compliqués !**
+
+---
+
+## 💡 Comment ça marche ?
+
+1. Les tâches sont dans `data/taches.json`
+2. PHP lit et écrit dans ce fichier
+3. Tout se passe dans `indexTaches.php`
+4. Très simple à comprendre !
+
+---
+
+## 🔧 Personnaliser
+
+### Changer le chemin
+Dans `index.php`, ligne 2 :
+```php
+$dossier_public = "http://localhost/ProjetTaches3_Simple/public/";
+```
+
+### Vider toutes les tâches
+Ouvrir `data/taches.json` et mettre juste :
+```
+[]
+```
+
+---
+
+## ✅ Avantages de cette version
+
+- ✅ **SIMPLE** : Tout en un fichier
+- ✅ **FACILE** : Pas de code compliqué
+- ✅ **FONCTIONNE** : Toutes les fonctionnalités demandées
+- ✅ **PAS DE BD** : Juste du JSON
+- ✅ **COMPLET** : Dashboard + filtres + recherche
+
+---
+
+## 🎯 Points clés
+
+### Données stockées :
+- id
+- titre
+- description
+- priorité (basse/moyenne/haute)
+- statut (a_faire/en_cours/terminee)
+- date_creation
+- date_limite
+- responsable
+
+### Règles :
+- Statut initial = "à faire"
+- Date création = automatique
+- On peut modifier que "à faire" et "en cours"
+- Détection des retards automatique
+
+---
+
+**C'est vraiment SIMPLE maintenant ! 😊**
